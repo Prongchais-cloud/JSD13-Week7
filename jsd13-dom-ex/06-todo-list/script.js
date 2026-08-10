@@ -9,7 +9,6 @@ const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");
 const list = document.getElementById("todo-list");
 
-
 // TODO 2: Listen for the form's "submit" event. Inside the handler:
 //   - call event.preventDefault() so the page doesn't reload
 //   - read and trim the input's value
@@ -23,7 +22,6 @@ form.addEventListener("submit", (e) => {
     input.value = "";
 });
 
-
 // TODO 3: Write a function addTodo(text) that:
 //   - creates an <li>
 //   - creates a <span class="todo-text"> inside it containing the text
@@ -32,20 +30,24 @@ form.addEventListener("submit", (e) => {
 //
 // Hint: use document.createElement, textContent, and append/appendChild.
 function addTodo(text) {
-    list.innerHTML += `<li><span class="todo-text">${text}</span><button class="delete-btn">x</button></li>`;
-};
-
+    list.innerHTML += `<li class=" "><span class="todo-text">${text}</span><button class="delete-btn">x</button></li>`;
+}
 
 // TODO 4: When the delete button inside an <li> is clicked, remove that <li>
 // from the list. (Attach this listener when you create the button in TODO 3.)
 list.addEventListener("click", (e) => {
-    if (e.target.class === "delete-btn") {
+    if (e.target.className === "delete-btn") {
         const li = e.target.closest("li");
         li.remove();
-    } 
+    }
 });
-
 
 // TODO 5: When the todo-text span inside an <li> is clicked, toggle the
 // "completed" class on the <li>. (Attach this listener when you create the
 // span in TODO 3.)
+list.addEventListener("click", (e) => {
+    if (e.target.tagName === "SPAN") {
+        const li = e.target.closest("li");
+        li.classList.toggle("completed");
+    }
+});
