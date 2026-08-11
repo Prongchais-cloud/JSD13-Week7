@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90%;
+    background-color: aqua;
+}
+
+footer {
+    width: 100%;
+    height: 5%;
+}
+
+.left-section {
+    width: 20%;
+    height: 100%;
+    border: 5px solid white;
+}
+
+.middle-section {
+    width: 60%;
+    height: 100%;
+    border: 5px solid white;
+}
+
+.right-section {
+    width: 20%;
+    height: 100%;
+    border: 5px solid white;
+}
+
+.click-box {
+    width: 100%;
+    height: 50%;
+    background-color: blueviolet;
+}
+
+.object-box {
+    width: 100%;
+    height: 50%;
+    background-color: brown;
+}
