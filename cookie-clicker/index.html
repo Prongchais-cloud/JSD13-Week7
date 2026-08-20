@@ -1,24 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header></header>
-    <main>
-        <section id="status-section" class="left-section"></section>
-        <section id="action-section" class="middle-section">
-            <div id="click-section" class="click-box">
-                <img src="asset\mine.png" alt="Mine">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookie</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="clicker-section">
+                <h1>Mine Clicker</h1>
+                <h2>Gold: <span id="cookie-count">0</span> 💰</h2>
+                <p>GPM: <span id="cps">0</span> G/m</p>
+                <button class="cookie-btn" id="cookie-btn">
+                    <img src="asset\mine.png" alt="mine">
+                </button>
             </div>
-            <div id="object-section" class="object-box"></div>
-        </section>
-        <section id="shop-section" class="right-section"></section>
-    </main>
-    <footer></footer>
-    <script src="script.js"></script>
-</body>
+
+            <div class="shop-section">
+                <h3>Shop</h3>
+
+                <button class="upgrade-btn" id="buy-clicker" disabled>
+                    ⛏ Upgrade PickAxe<br />
+                    <small
+                        >Price: <span id="clicker-cost">10</span> Gold</small
+                    >
+                </button>
+
+                <button class="upgrade-btn" id="buy-grandma" disabled>
+                    👨‍🔧 Hire Employee<br />
+                    <small
+                        >Price: <span id="grandma-cost">15</span> Gold</small
+                    >
+                </button>
+
+                <button class="upgrade-btn" id="buy-factory" disabled>
+                    🔩 Buy Machine<br />
+                    <small
+                        >Price: <span id="factory-cost">100</span> Gold</small
+                    >
+                </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

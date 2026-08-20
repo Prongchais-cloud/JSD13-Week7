@@ -5,56 +5,74 @@
 }
 
 body {
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-header {
-    width: 100%;
-    height: 5%;
-}
-
-main {
+    font-family: "Arial", sans-serif;
+    color: #ecf0f1;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 90%;
-    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+    background-image: url(asset/bg-mine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-footer {
-    width: 100%;
-    height: 5%;
+.container {
+    display: flex;
+    gap: 40px;
+    background-color: #211c18;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.left-section {
-    width: 20%;
-    height: 100%;
-    border: 5px solid white;
+.clicker-section {
+    text-align: center;
 }
 
-.middle-section {
-    width: 60%;
-    height: 100%;
-    border: 5px solid white;
+.cookie-btn {
+    font-size: 100px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    outline: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
-.right-section {
-    width: 20%;
-    height: 100%;
-    border: 5px solid white;
+.cookie-btn:active {
+    transform: scale(0.9);
 }
 
-.click-box {
-    width: 100%;
-    height: 50%;
-    background-color: blueviolet;
+.shop-section {
+    border-left: 2px solid #7f8c8d;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.object-box {
-    width: 100%;
-    height: 50%;
-    background-color: brown;
+.upgrade-btn {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: left;
+}
+
+.upgrade-btn:hover {
+    background-color: #d35400;
+}
+
+.upgrade-btn:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
 }
